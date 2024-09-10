@@ -1,0 +1,36 @@
+<div class="header-nav">
+    <a class="link" routerLink="./" routerLinkActive="active">Career Paths</a>
+</div>
+
+@if (careerPath(); as careerPath) {
+<div class="container">
+    <div class="header">
+        <div class="info">
+            <h1 class="title">{{ careerPath.name }}</h1>
+            <div class="description">{{ careerPath.description }}</div>
+        </div>
+        @if (username() == 'Manager') {
+        <div class="buttons">
+            <a class="btn">Edit</a>
+        </div>
+        }
+    </div>
+
+    <div class="career-path">
+        <div></div>
+        @for (type of careerPath.skillTypes; track type.id) {
+        <div class="type">{{ type.name }}</div>
+        }
+        @for (level of careerPath.skillLevels; track level.id) {
+        <div class="level">{{ level.name }}</div>
+        @for (type of careerPath.skillTypes; track type.id) {
+        <div class="group">
+            @for (skill of getGroup(type.id, level.id)?.skills; track $index) {
+            <div class="skill">{{ skill.name }}</div>
+            }
+        </div>
+        }
+        }
+    </div>
+</div>
+}

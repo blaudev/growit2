@@ -4,13 +4,13 @@ import { CareerPathService } from '../services/career-path.service';
 import { UserService } from '../services/user.service';
 
 @Component({
-  selector: 'app-company-carrer-path',
+  selector: 'app-company-career-path-editor',
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './company-carrer-path.component.html',
-  styleUrl: './company-carrer-path.component.css',
+  templateUrl: './company-career-path-editor.component.html',
+  styleUrl: './company-career-path-editor.component.css',
 })
-export class CompanyCareerPathComponent {
+export class CompanyCareerPathEditorComponent {
   id = input.required<number>();
 
   #careerPathService = inject(CareerPathService);

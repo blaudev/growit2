@@ -3,11 +3,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CareerPathService } from '../services/career-path.service';
 
 @Component({
-  selector: 'app-company-carrer-paths',
+  selector: 'app-company-career-paths',
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './company-carrer-paths.component.html',
-  styleUrl: './company-carrer-paths.component.css',
+  templateUrl: './company-career-paths.component.html',
+  styleUrl: './company-career-paths.component.css',
 })
 export class CompanyCareerPathsComponent {
   #careerPathService = inject(CareerPathService);

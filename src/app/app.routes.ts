@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { CompanyCareerPathComponent } from './company-carrer-path/company-carrer-path.component';
-import { CompanyCareerPathsComponent } from './company-carrer-paths/company-carrer-paths.component';
+import { CompanyCareerPathComponent } from './company-career-path/company-career-path.component';
+import { CompanyCareerPathsComponent } from './company-career-paths/company-career-paths.component';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 import { LoginComponent } from './login/login.component';
 import { MeCareerPathComponent } from './me-carrer-path/me-carrer-path.component';
