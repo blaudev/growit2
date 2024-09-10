@@ -11,7 +11,7 @@ import { UserService } from '../services/user.service';
   styleUrl: './company-career-path.component.css',
 })
 export class CompanyCareerPathComponent {
-  id = input.required<number>();
+  id = input.required<string>();
 
   #careerPathService = inject(CareerPathService);
   #userService = inject(UserService);
@@ -23,7 +23,7 @@ export class CompanyCareerPathComponent {
     allowSignalWrites: true,
   });
 
-  getGroup(typeId: number, levelId: number) {
+  getGroup(typeId: string, levelId: string) {
     return this.careerPath()?.skillGroups.find(
       (f) => f.skillTypeId === typeId && f.skillLevelId === levelId
     );

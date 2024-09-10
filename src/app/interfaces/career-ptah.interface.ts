@@ -1,5 +1,5 @@
 export interface CareerPath {
-  id: number;
+  id: string;
   name: string;
   description: string;
   skillTypes: SkillType[];
@@ -8,23 +8,23 @@ export interface CareerPath {
 }
 
 export interface Skill {
-  id: number;
+  id: string;
   name: string;
 }
 
 export interface SkillGroup {
-  id: number;
-  skillTypeId: number;
-  skillLevelId: number;
+  id: string;
+  skillTypeId: string;
+  skillLevelId: string;
   skills: Skill[];
 }
 
 export interface SkillType {
-  id: number;
+  id: string;
   name: string;
 }
 
 export interface SkillLevel {
-  id: number;
+  id: string;
   name: string;
 }

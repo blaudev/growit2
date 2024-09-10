@@ -1,0 +1,267 @@
+[
+  {
+    "id": "e05d6a14-6a6e-4b23-bf78-98a9ab7f1e05",
+    "name": "Software Engineering Career Path",
+    "description": "Career path for Web developers.",
+    "skillTypes": [
+      { "id": "faedebf1-fd89-4f0d-b4ea-68e0ea2f2959", "name": "Technology" },
+      { "id": "4bc2b34f-44c3-4f57-b1e7-40a638e8d1b6", "name": "Team Player" },
+      { "id": "ab5e1fc1-6f2e-4d5e-a0c6-28d8f4d52916", "name": "Communication" }
+    ],
+    "skillLevels": [
+      {
+        "id": "1c30e2ea-df73-41e3-85d3-2fbc0d6ff43f",
+        "name": "Junior Developer"
+      },
+      {
+        "id": "5e7318d6-0d98-43ff-8413-1670a78c3b02",
+        "name": "Mid-level Developer"
+      },
+      {
+        "id": "9f8cbb3e-f28b-4b4b-bf5d-53a1b89e6e16",
+        "name": "Senior Developer"
+      }
+    ],
+    "skillGroups": [
+      {
+        "id": "fb42f4b6-72c2-4ef5-bd39-9a63edbd7a06",
+        "skillTypeId": "faedebf1-fd89-4f0d-b4ea-68e0ea2f2959",
+        "skillLevelId": "1c30e2ea-df73-41e3-85d3-2fbc0d6ff43f",
+        "skills": [
+          { "id": "b6b8c960-35f3-4a7c-bb5f-4d33b0a4e527", "name": "HTML" },
+          { "id": "d451fe9f-3403-4b2c-b8a5-9b44d34d15b4", "name": "CSS" },
+          {
+            "id": "b09e6d8c-28a4-4b18-9b4e-52c4ef0b4f76",
+            "name": "JavaScript basics"
+          },
+          {
+            "id": "b8e2dbe7-8587-4cfb-bb08-c6ff80b7f48e",
+            "name": "Version control (Git)"
+          }
+        ]
+      },
+      {
+        "id": "f1c80cfb-df2b-4d3d-8c8e-1d92854d3a9b",
+        "skillTypeId": "faedebf1-fd89-4f0d-b4ea-68e0ea2f2959",
+        "skillLevelId": "5e7318d6-0d98-43ff-8413-1670a78c3b02",
+        "skills": [
+          {
+            "id": "92ae8b39-6e30-4d2e-ae35-6cbdcaaf6f1e",
+            "name": "React/Vue/Angular"
+          },
+          { "id": "b4fef38e-8d12-4a16-a80d-6b038b65e62b", "name": "Node.js" },
+          {
+            "id": "d1f251e7-29d1-4e9d-a420-d78b00b4e1e5",
+            "name": "RESTful APIs"
+          },
+          {
+            "id": "e86f2b93-3d76-4377-b645-b6e5cf06a9e4",
+            "name": "SQL/NoSQL databases"
+          }
+        ]
+      },
+      {
+        "id": "f23409f3-d1a4-420a-929c-c08a4cf750a2",
+        "skillTypeId": "faedebf1-fd89-4f0d-b4ea-68e0ea2f2959",
+        "skillLevelId": "9f8cbb3e-f28b-4b4b-bf5d-53a1b89e6e16",
+        "skills": [
+          {
+            "id": "e2c9062e-2c8e-48a4-b7c3-0e08b440ca93",
+            "name": "System design"
+          },
+          {
+            "id": "d6b6f7b3-11a4-4d7d-a460-c5c56e908d9b",
+            "name": "Performance optimization"
+          },
+          {
+            "id": "c9b4b2d7-4f15-4f77-8a2b-f37d6d94c5b7",
+            "name": "Security best practices"
+          },
+          { "id": "f6b80043-b8f4-453d-b56e-e4ed5455eb7e", "name": "CI/CD" }
+        ]
+      },
+      {
+        "id": "d5a00f91-3d91-4c1f-87d2-bf6570a2459d",
+        "skillTypeId": "4bc2b34f-44c3-4f57-b1e7-40a638e8d1b6",
+        "skillLevelId": "1c30e2ea-df73-41e3-85d3-2fbc0d6ff43f",
+        "skills": [
+          {
+            "id": "2340e27d-9186-4f1a-8c4a-e0063737ae32",
+            "name": "Pair programming"
+          },
+          {
+            "id": "7d223431-5c41-4d61-9d3b-0378b9d92e1f",
+            "name": "Code reviews (participating)"
+          }
+        ]
+      },
+      {
+        "id": "2d6eeb57-d034-4d36-b403-d8a3e4cfdb9e",
+        "skillTypeId": "4bc2b34f-44c3-4f57-b1e7-40a638e8d1b6",
+        "skillLevelId": "5e7318d6-0d98-43ff-8413-1670a78c3b02",
+        "skills": [
+          {
+            "id": "8dd993a7-3799-4d7d-8c43-9c8e63141ed2",
+            "name": "Mentoring juniors"
+          },
+          {
+            "id": "ba05ef62-2f88-4f82-805b-4aef945c2a56",
+            "name": "Sprint planning"
+          },
+          {
+            "id": "15e1f1c6-2e2d-4c14-aadf-4f185f1d0127",
+            "name": "Estimating tasks"
+          }
+        ]
+      },
+      {
+        "id": "8fc4f6f7-8eaf-4a0e-aaa6-1f3e2748ea9b",
+        "skillTypeId": "4bc2b34f-44c3-4f57-b1e7-40a638e8d1b6",
+        "skillLevelId": "9f8cbb3e-f28b-4b4b-bf5d-53a1b89e6e16",
+        "skills": [
+          {
+            "id": "8a4b0853-43f5-4a3d-9bb6-606e10fa7b76",
+            "name": "Code reviews (leading)"
+          },
+          {
+            "id": "f7d737ef-2cc3-4ae5-bb44-489fbb36fbd4",
+            "name": "Architectural decisions"
+          },
+          {
+            "id": "b835b5b4-cf86-4b78-9b71-5a0bdbd07ff3",
+            "name": "Cross-team collaboration"
+          }
+        ]
+      },
+      {
+        "id": "fe77b51c-3c51-45ac-93aa-573e5f4f6f3b",
+        "skillTypeId": "ab5e1fc1-6f2e-4d5e-a0c6-28d8f4d52916",
+        "skillLevelId": "1c30e2ea-df73-41e3-85d3-2fbc0d6ff43f",
+        "skills": [
+          {
+            "id": "8a5a6f1e-d567-4c0f-9302-82b70a786e87",
+            "name": "Status updates"
+          },
+          {
+            "id": "91bb29a1-915f-4c96-87ec-5d46f63f3b36",
+            "name": "Asking for help"
+          }
+        ]
+      },
+      {
+        "id": "2a64a2e7-3687-4cc6-84a4-87e35c890fe1",
+        "skillTypeId": "ab5e1fc1-6f2e-4d5e-a0c6-28d8f4d52916",
+        "skillLevelId": "5e7318d6-0d98-43ff-8413-1670a78c3b02",
+        "skills": [
+          {
+            "id": "d8702d67-2333-4181-bdef-1e19a645b72d",
+            "name": "Technical documentation"
+          },
+          {
+            "id": "4f948d3c-9a3b-4a46-8c67-4e8de629ffb1",
+            "name": "Team communication"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e4b764ad-0d29-47b7-8d7d-0e6e5fd8d8f6",
+    "name": "IT Management",
+    "description": "Career path for IT Managers.",
+    "skillTypes": [
+      { "id": "faedebf1-fd89-4f0d-b4ea-68e0ea2f2959", "name": "Technology" },
+      { "id": "4bc2b34f-44c3-4f57-b1e7-40a638e8d1b6", "name": "Team Player" },
+      { "id": "ab5e1fc1-6f2e-4d5e-a0c6-28d8f4d52916", "name": "Communication" }
+    ],
+    "skillLevels": [
+      { "id": "4aef8d43-89a4-4b2c-9d35-56f572ab1f55", "name": "Tech Lead" },
+      {
+        "id": "15e4e009-773c-437c-bb4c-df6f07f52c7a",
+        "name": "Engineering Manager"
+      }
+    ],
+    "skillGroups": [
+      {
+        "id": "8a9e8c5e-65f8-4d8d-8f8f-5eaf679b69bb",
+        "skillTypeId": "faedebf1-fd89-4f0d-b4ea-68e0ea2f2959",
+        "skillLevelId": "4aef8d43-89a4-4b2c-9d35-56f572ab1f55",
+        "skills": [
+          {
+            "id": "5b8e23fc-2b57-4e9d-9b4e-4a1b836c4f46",
+            "name": "Scalable architecture"
+          },
+          {
+            "id": "eb8f4d57-8f8f-41ed-962a-5f37a1e0d4d5",
+            "name": "Multiple tech stacks"
+          },
+          {
+            "id": "f2b2bb2b-d372-4630-a88e-2d8a8f58d07a",
+            "name": "Data modeling"
+          },
+          {
+            "id": "8c3e06d5-f0cf-4c67-86f1-06c5a4ae52cb",
+            "name": "Cloud platforms (AWS/Azure/GCP)"
+          }
+        ]
+      },
+      {
+        "id": "f7e4e43e-6d75-43d7-87b5-0c728cc0a3d6",
+        "skillTypeId": "4bc2b34f-44c3-4f57-b1e7-40a638e8d1b6",
+        "skillLevelId": "4aef8d43-89a4-4b2c-9d35-56f572ab1f55",
+        "skills": [
+          {
+            "id": "2d71f0cf-5368-4b77-bfd0-29f3e00c888b",
+            "name": "Team leadership"
+          },
+          {
+            "id": "24a90b8a-7d4c-44d4-a7e6-dc70132b68b7",
+            "name": "Mentoring seniors"
+          },
+          {
+            "id": "345a8c37-60b4-4b1b-9d1e-9266f8e054d6",
+            "name": "Project planning"
+          }
+        ]
+      },
+      {
+        "id": "5b88a57c-5a5b-4345-b6d2-7cfa88c4d3b2",
+        "skillTypeId": "4bc2b34f-44c3-4f57-b1e7-40a638e8d1b6",
+        "skillLevelId": "15e4e009-773c-437c-bb4c-df6f07f52c7a",
+        "skills": [
+          {
+            "id": "a5b21c77-3a8b-49ac-a86a-77adf8dbbb4b",
+            "name": "Resource planning"
+          },
+          {
+            "id": "c0a6b0a3-f888-45d7-b1b3-71730c7940c3",
+            "name": "Conflict resolution"
+          },
+          {
+            "id": "be7d69d5-68d0-4cf9-b2f6-8728c158a97f",
+            "name": "Performance management"
+          }
+        ]
+      },
+      {
+        "id": "a8e8b4b7-3774-42e4-bd61-f6e6d29e2efb",
+        "skillTypeId": "ab5e1fc1-6f2e-4d5e-a0c6-28d8f4d52916",
+        "skillLevelId": "15e4e009-773c-437c-bb4c-df6f07f52c7a",
+        "skills": [
+          {
+            "id": "6f5dfe5f-8a54-4d76-83ff-d0260b9c8c3d",
+            "name": "Budget planning"
+          },
+          {
+            "id": "8bda5641-08e7-4d6a-bf48-e3e4f4b328e3",
+            "name": "Company-wide presentations"
+          },
+          {
+            "id": "d45139f1-c66d-4d7f-8c43-5bb4c8aaf09e",
+            "name": "Policy making"
+          }
+        ]
+      }
+    ]
+  }
+]
