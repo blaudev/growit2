@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { CompanyCareerPathComponent } from './company-career-path/company-career-path.component';
 import { CompanyCareerPathsComponent } from './company-career-paths/company-career-paths.component';
+import { CompanyCareerPathEditorComponent } from './company-carer-path-editor/company-career-path-editor.component';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 import { LoginComponent } from './login/login.component';
 import { MeCareerPathComponent } from './me-carrer-path/me-carrer-path.component';
@@ -30,6 +31,10 @@ export const routes: Routes = [
       {
         path: 'company/career-paths/:id',
         component: CompanyCareerPathComponent,
+      },
+      {
+        path: 'company/career-paths/:id/editor',
+        component: CompanyCareerPathEditorComponent,
       },
     ],
   },

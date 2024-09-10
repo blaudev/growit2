@@ -1,12 +1,12 @@
 import { Component, effect, inject, input } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { EditPageComponent } from '../components/edit-page/edit-page.component';
 import { CareerPathService } from '../services/career-path.service';
 import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-company-career-path-editor',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [EditPageComponent],
   templateUrl: './company-career-path-editor.component.html',
   styleUrl: './company-career-path-editor.component.css',
 })

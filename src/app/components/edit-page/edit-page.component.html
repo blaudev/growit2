@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="header">
+    <div class="header-in" [style.width]="width()">
+      <h1 class="title header-l-bold">{{ title() }}</h1>
+      <div class="buttons">
+        <button type="button" class="btn red-btn" (click)="onCancel()">Cancelar</button>
+        <button type="button" class="btn" (click)="onSave()">Guardar</button>
+        <ng-content select="[buttons]"></ng-content>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div [style.width]="width()">
+      <ng-content />
+    </div>
+  </div>
+</div>
