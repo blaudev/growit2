@@ -21,8 +21,8 @@
 
 .search {
     border-radius: 8px;
-    border: 1px solid hsl(0, 0%, 60%);
-    height: 32px;
+    border: 1px solid hsl(0, 0%, 80%);
+    height: 40px;
     width: 100%;
     padding: 0 16px;
 }
