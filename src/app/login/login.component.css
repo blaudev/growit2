@@ -1,4 +1,23 @@
 .container {
     display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
     height: 100%;
+}
+
+.link {
+    border: solid 1px hsl(0, 0%, 90%);
+    border-radius: 8px;
+    width: 200px;
+    height: 80px;
+    padding: 16px;
+    font-weight: 600;
+    background-color: hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
+.link:hover {
+    background-color: hsl(0, 0%, 80%);
 }
