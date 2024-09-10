@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { CompanyCareerPathComponent } from './company-carrer-path/company-carrer-path.component';
 import { CompanyCareerPathsComponent } from './company-carrer-paths/company-carrer-paths.component';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 import { LoginComponent } from './login/login.component';
@@ -25,6 +26,10 @@ export const routes: Routes = [
       {
         path: 'company/career-paths',
         component: CompanyCareerPathsComponent,
+      },
+      {
+        path: 'company/career-paths/:id',
+        component: CompanyCareerPathComponent,
       },
     ],
   },

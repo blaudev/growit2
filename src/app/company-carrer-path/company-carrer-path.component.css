@@ -1,0 +1,67 @@
+:host {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.header {
+    display: flex;
+}
+
+.header .title {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.header .description {
+    font-size: 14px;
+    color: hsl(0, 0%, 50%);
+}
+
+.header .info {
+    flex: 1;
+}
+
+.career-path {
+    min-width: 1000px;
+    display: grid;
+    grid-template-columns: auto repeat(3, 1fr);
+    gap: 16px;
+}
+
+.type {
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.level {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: solid 1px hsl(0, 0%, 90%);
+    border-radius: 16px;
+    padding: 16px;
+    font-size: 13px;
+    color: hsl(0, 0%, 40%);
+    min-height: 80px;
+}
+
+.group:hover {
+    background-color: hsl(0, 0%, 95%);
+}

@@ -69,3 +69,17 @@ h1.title {
     font-weight: 600;
     color: hsl(0, 0%, 10%);
 }
+
+.btn {
+    cursor: pointer;
+    border: solid 1px hsl(0, 0%, 80%);
+    border-radius: 8px;
+    padding: 10px 20px;
+    background: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: hsl(0, 0%, 30%);
+}
