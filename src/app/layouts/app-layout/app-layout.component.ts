@@ -2,12 +2,10 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-layout',
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  templateUrl: './app-layout.component.html',
+  styleUrl: './app-layout.component.css',
 })
-export class AppComponent {
-  title = 'growit';
-}
+export class AppLayoutComponent {}
