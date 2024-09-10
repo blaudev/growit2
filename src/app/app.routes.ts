@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { CompanyCareerPathsComponent } from './company-carrer-paths copy/company-carrer-paths.component';
+import { CompanyCareerPathsComponent } from './company-carrer-paths/company-carrer-paths.component';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 import { LoginComponent } from './login/login.component';
 import { MeCareerPathComponent } from './me-carrer-path/me-carrer-path.component';

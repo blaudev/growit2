@@ -10,7 +10,7 @@ import { UserService } from '../../services/user.service';
   styleUrl: './app-layout.component.css',
 })
 export class AppLayoutComponent {
-  userService = inject(UserService);
+  #userService = inject(UserService);
 
-  username = this.userService.username;
+  username = this.#userService.username;
 }

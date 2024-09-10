@@ -36,3 +36,36 @@ img {
 ul {
     list-style: none;
 }
+
+.header-nav {
+    display: flex;
+    width: 800px;
+    gap: 8px;
+    padding: 8px;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 8px;
+}
+
+.header-nav .link {
+    color: hsl(0, 0%, 25%);
+    text-decoration: none;
+    display: flex;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.header-nav .link:hover {
+    background-color: hsl(0, 0%, 80%);
+}
+
+.header-nav .link.active {
+    background-color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+h1.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: hsl(0, 0%, 10%);
+}
