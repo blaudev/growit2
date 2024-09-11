@@ -1,3 +1,33 @@
-@if (careerPath(); as careerPath) {
-<app-edit-page title="Edit career path"></app-edit-page>
-}
+<app-edit-page title="Edit career path">
+
+    <form [formGroup]="careerPathForm" (ngSubmit)="onSubmit()">
+        <!-- Skill Types -->
+        <div>
+            <h3>Skill Types</h3>
+            <div formArrayName="skillTypes">
+                <div *ngFor="let type of skillTypes.controls; let i = index" [formGroupName]="i">
+                    <input formControlName="name" placeholder="Skill Type Name" />
+                    <button (click)="deleteSkillType(i)">Delete</button>
+                </div>
+            </div>
+            <button (click)="addSkillType()">Add Skill Type</button>
+        </div>
+
+        <!-- Skill Levels -->
+        <div>
+            <h3>Skill Levels</h3>
+            <div formArrayName="skillLevels">
+                <div *ngFor="let level of skillLevels.controls; let i = index" [formGroupName]="i">
+                    <input formControlName="name" placeholder="Skill Level Name" />
+                    <button (click)="deleteSkillLevel(i)">Delete</button>
+                </div>
+            </div>
+            <button (click)="addSkillLevel()">Add Skill Level</button>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Save Career Path</button>
+    </form>
+
+
+</app-edit-page>
