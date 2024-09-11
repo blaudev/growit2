@@ -1,3 +1,5 @@
+@if (user(); as user) {
+
 <div class="container">
   <div class="aside">
     <div class="top">
@@ -25,8 +27,9 @@
     </div>
     <div class="bottom">
       <a class="user" routerLink="/login">
-        <img class="avatar" src="https://i.pravatar.cc/40" alt="" />{{ username() }}</a>
+        <img class="avatar" [src]="avatar(user.id)" alt="" />{{ user.name }}</a>
     </div>
   </div>
   <router-outlet />
 </div>
+}

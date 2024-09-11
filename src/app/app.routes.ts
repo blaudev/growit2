@@ -9,7 +9,7 @@ import { TeamEmployeesComponent } from './team-employees/team-employees.componen
 
 export const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: LoginComponent,
   },
   {

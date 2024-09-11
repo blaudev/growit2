@@ -9,7 +9,7 @@
             <h1 class="title">{{ careerPath.name }}</h1>
             <div class="description">{{ careerPath.description }}</div>
         </div>
-        @if (username() == 'Manager') {
+        @if (user()?.isManager) {
         <div class="buttons">
             <a class="btn" routerLink="/company/career-paths/{{careerPath.id}}/editor">Edit</a>
         </div>

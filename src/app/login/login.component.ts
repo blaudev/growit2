@@ -14,12 +14,12 @@ export class LoginComponent {
   router = inject(Router);
 
   loginManager() {
-    this.userService.setUser('Manager');
+    this.userService.setActiveUser('manager');
     this.router.navigate(['/me/career-path']);
   }
 
   loginEmployee() {
-    this.userService.setUser('Employee');
+    this.userService.setActiveUser('employee');
     this.router.navigate(['/me/career-path']);
   }
 }

@@ -12,5 +12,9 @@ import { UserService } from '../../services/user.service';
 export class AppLayoutComponent {
   #userService = inject(UserService);
 
-  username = this.#userService.username;
+  user = this.#userService.user;
+
+  avatar(id: number) {
+    return `assets/${id}.jfif`;
+  }
 }
