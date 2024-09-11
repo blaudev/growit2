@@ -1,3 +1,48 @@
-<div class="container">
-    Team employees
+<div class="header-nav">
+    <a class="link" routerLink="./" routerLinkActive="active">Employees</a>
 </div>
+
+@if (users(); as users) {
+<div class="container">
+    <div class="header">
+        <div class="info">
+            <h1 class="title">Your team</h1>
+            <div class="description">List, edit and add members to your team.</div>
+        </div>
+
+        @if (user()?.isManager) {
+        <div class="buttons">
+            <a class="btn" routerLink="/">Add</a>
+        </div>
+        }
+    </div>
+
+    <div class="tools-panel">
+        <app-search-box placeholder="Search..." />
+    </div>
+
+    <table class="users">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Job</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (user of users; track user.id) {
+            <tr>
+                <td class="name-col">
+                    <a routerLink="/team/employees/{{ user.id }}">
+                        <img class="avatar" [src]="avatar(user.id)" alt="{{ user.name }}" />
+                        <span class="name">{{ user.name }}</span>
+                    </a>
+                </td>
+                <td class="skill-level-col">
+                    {{ user.skillLevel }}
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}

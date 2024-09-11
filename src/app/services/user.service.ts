@@ -3,53 +3,63 @@ import { computed, effect, Injectable, signal } from '@angular/core';
 const users: User[] = [
   {
     id: 1,
-    name: 'Marisa Paredes',
-    isManager: true,
+    name: 'John Doe',
+    isManager: false,
+    skillLevel: 'Senior Software Engineer',
   },
   {
     id: 2,
-    name: 'John Doe',
-    isManager: false,
+    name: 'Marisa Paredes',
+    isManager: true,
+    skillLevel: 'Engineering Manager',
   },
   {
     id: 3,
     name: 'Lars Nielsen',
     isManager: false,
+    skillLevel: 'Mid Software Engineer',
   },
   {
     id: 4,
     name: 'Aiko Tanaka',
     isManager: false,
+    skillLevel: 'Senior Software Engineer',
   },
   {
     id: 5,
     name: 'Carlos Monteiro',
     isManager: false,
+    skillLevel: 'Junior Software Engineer',
   },
   {
     id: 6,
     name: 'Fatima Al-Hassan',
     isManager: false,
+    skillLevel: 'Mid Software Engineer',
   },
   {
     id: 7,
     name: 'Ivan Petrov',
     isManager: false,
+    skillLevel: 'Senior Software Engineer',
   },
   {
     id: 8,
     name: 'Lucia Rossi',
     isManager: false,
+    skillLevel: 'Junior Software Engineer',
   },
   {
     id: 9,
     name: 'Youssef Abdallah',
     isManager: false,
+    skillLevel: 'Mid Software Engineer',
   },
   {
     id: 10,
     name: 'Anya Kuznetsova',
     isManager: false,
+    skillLevel: 'Junior Software Engineer',
   },
 ];
 
@@ -83,4 +93,5 @@ interface User {
   id: number;
   name: string;
   isManager: boolean;
+  skillLevel: string;
 }

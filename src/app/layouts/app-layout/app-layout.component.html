@@ -26,8 +26,8 @@
       </div>
     </div>
     <div class="bottom">
-      <a class="user" routerLink="/login">
-        <img class="avatar" [src]="avatar(user.id)" alt="" />{{ user.name }}</a>
+      <a class="user" routerLink="/">
+        <img class="avatar" [src]="avatar(user.id)" alt="{{user.name}}" />{{ user.name }}</a>
     </div>
   </div>
   <router-outlet />

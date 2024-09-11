@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.tool {
+  padding-left: 40px;
+  width: 400px;
+}
+
+.tool::placeholder {
+  color: hsl(0, 0%, 70%);
+}
+
+.search-icon {
+  position: absolute;
+  width: 24px;
+  fill: hsl(0, 0%, 20%);
+  margin-left: 8px;
+}
+
+.submit-button {
+  display: none;
+}
