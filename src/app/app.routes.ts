@@ -3,6 +3,7 @@ import { CompanyCareerPathComponent } from './company-career-path/company-career
 import { CompanyCareerPathsComponent } from './company-career-paths/company-career-paths.component';
 import { CompanyCareerPathEditorComponent } from './company-carer-path-editor/company-career-path-editor.component';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
+import { MeLayoutComponent } from './layouts/me-layout/me-layout.component';
 import { LoginComponent } from './login/login.component';
 import { MeCareerPathComponent } from './me-carrer-path/me-carrer-path.component';
 import { TeamEmployeesComponent } from './team-employees/team-employees.component';
@@ -17,8 +18,14 @@ export const routes: Routes = [
     component: AppLayoutComponent,
     children: [
       {
-        path: 'me/career-path',
-        component: MeCareerPathComponent,
+        path: 'me',
+        component: MeLayoutComponent,
+        children: [
+          {
+            path: 'career-path',
+            component: MeCareerPathComponent,
+          },
+        ],
       },
       {
         path: 'team/employees',
