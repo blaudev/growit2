@@ -7,32 +7,67 @@
       <div class="section">
         <h2 class="title">ME</h2>
         <div class="links">
-          <a class="link" routerLink="/me/profile" routerLinkActive="active">Profile</a>
-          <a class="link" routerLink="/me/career-path" routerLinkActive="active">Career path</a>
-          <a class="link" routerLink="/me/one-on-ones" routerLinkActive="active">Onr on ones</a>
-          <a class="link" routerLink="/me/performance-revies" routerLinkActive="active">Performance reviews</a>
-          <a class="link" routerLink="/me/training-budgets" routerLinkActive="active">Training budgets</a>
-          <a class="link" routerLink="/me/documents" routerLinkActive="active">Documents</a>
+          <a class="link" routerLink="/me/profile" routerLinkActive="active"
+            >Profile</a
+          >
+          <a class="link" routerLink="/me/career-path" routerLinkActive="active"
+            >Career path</a
+          >
+          <a class="link" routerLink="/me/one-on-ones" routerLinkActive="active"
+            >One on ones</a
+          >
+          <a
+            class="link"
+            routerLink="/me/performance-reviews"
+            routerLinkActive="active"
+            >Performance reviews</a
+          >
+          <a
+            class="link"
+            routerLink="/me/training-budgets"
+            routerLinkActive="active"
+            >Training budgets</a
+          >
+          <a class="link" routerLink="/me/documents" routerLinkActive="active"
+            >Documents</a
+          >
         </div>
       </div>
 
       <div class="section">
         <h2 class="title">TEAM</h2>
         <ul class="links">
-          <li><a class="link" routerLink="/team/employees" routerLinkActive="active">Employees</a></li>
+          <li>
+            <a
+              class="link"
+              routerLink="/team/employees"
+              routerLinkActive="active"
+              >Employees</a
+            >
+          </li>
         </ul>
       </div>
 
       <div class="section">
         <h2 class="title">COMPANY</h2>
         <ul class="links">
-          <li><a class="link" routerLink="/company/career-paths" routerLinkActive="active">Career Paths</a></li>
+          <li>
+            <a
+              class="link"
+              routerLink="/company/career-paths"
+              routerLinkActive="active"
+              >Career Paths</a
+            >
+          </li>
         </ul>
       </div>
     </div>
     <div class="bottom">
       <a class="user" routerLink="/">
-        <img class="avatar" [src]="avatar(user.id)" alt="{{user.name}}" />{{ user.name }}</a>
+        <img class="avatar" [src]="avatar(user.id)" alt="{{ user.name }}" />{{
+          user.name
+        }}</a
+      >
     </div>
   </div>
   <router-outlet />
