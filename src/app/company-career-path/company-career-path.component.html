@@ -1,36 +1,38 @@
 <div class="header-nav">
-    <a class="link" routerLink="./" routerLinkActive="active">Career Paths</a>
+  <a class="link" routerLink="./" routerLinkActive="active">Career Paths</a>
 </div>
 
 @if (careerPath(); as careerPath) {
 <div class="container">
-    <div class="header">
-        <div class="info">
-            <h1 class="title">{{ careerPath.name }}</h1>
-            <div class="description">{{ careerPath.description }}</div>
-        </div>
-        @if (user()?.isManager) {
-        <div class="buttons">
-            <a class="btn" routerLink="/company/career-paths/{{careerPath.id}}/editor">Edit</a>
-        </div>
-        }
+  <div class="header">
+    <div class="info">
+      <h1 class="title">{{ careerPath.name }}</h1>
+      <div class="description">{{ careerPath.description }}</div>
     </div>
+    @if (user()?.isManager) {
+    <div class="buttons">
+      <a
+        class="btn"
+        routerLink="/company/career-paths/{{ careerPath.id }}/editor"
+        >Edit</a
+      >
+    </div>
+    }
+  </div>
 
-    <div class="career-path">
-        <div></div>
-        @for (type of careerPath.skillTypes; track type.id) {
-        <div class="type">{{ type.name }}</div>
-        }
-        @for (level of careerPath.skillLevels; track level.id) {
-        <div class="level">{{ level.name }}</div>
-        @for (type of careerPath.skillTypes; track type.id) {
-        <div class="group">
-            @for (skill of getGroup(type.id, level.id)?.skills; track $index) {
-            <div class="skill">{{ skill.name }}</div>
-            }
-        </div>
-        }
-        }
+  <div class="career-path" [style.grid-template-columns]="columns()">
+    <div></div>
+    @for (name of skillNames(); track name) {
+    <div class="type">{{ name }}</div>
+    } @for (level of careerPath.levels; track level.name) {
+    <div class="level">{{ level.name }}</div>
+    @for (skill of level.skills; track skill.name) {
+    <div class="group">
+      @for (item of skill.items; track item.name) {
+      <div class="skill">{{ item.name }}</div>
+      }
     </div>
+    } }
+  </div>
 </div>
 }

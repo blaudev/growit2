@@ -1,4 +1,4 @@
-import { Component, effect, inject, input } from '@angular/core';
+import { Component, computed, effect, inject, input } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CareerPathService } from '../services/career-path.service';
 import { UserService } from '../services/user.service';
@@ -16,16 +16,23 @@ export class CompanyCareerPathComponent {
   #careerPathService = inject(CareerPathService);
   #userService = inject(UserService);
 
-  careerPath = this.#careerPathService.careerPath;
+  careerPath = this.#careerPathService.currentCareerPath;
   user = this.#userService.currentUser;
 
-  #init = effect(() => this.#careerPathService.loadCareerPath(this.id()), {
-    allowSignalWrites: true,
-  });
+  skillNames = computed(() =>
+    this.careerPath()
+      ?.levels.map((l) => l.skills.map((s) => s.name))
+      .flat()
+  );
 
-  getGroup(typeId: string, levelId: string) {
-    return this.careerPath()?.skillGroups.find(
-      (f) => f.skillTypeId === typeId && f.skillLevelId === levelId
-    );
-  }
+  columns = computed(
+    () => `auto repeat(${this.skillNames()?.length || 1}, 1fr)`
+  );
+
+  #init = effect(
+    () => this.#careerPathService.setCurrentCareerPathId(this.id()),
+    {
+      allowSignalWrites: true,
+    }
+  );
 }

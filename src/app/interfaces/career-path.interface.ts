@@ -2,29 +2,20 @@ export interface CareerPath {
   id: string;
   name: string;
   description: string;
-  skillTypes: SkillType[];
-  skillLevels: SkillLevel[];
-  skillGroups: SkillGroup[];
+  levels: Level[];
 }
 
-export interface Skill {
-  id: string;
+export interface Level {
   name: string;
-}
-
-export interface SkillGroup {
-  id: string;
-  skillTypeId: string;
-  skillLevelId: string;
   skills: Skill[];
 }
 
-export interface SkillType {
-  id: string;
+export interface Skill {
   name: string;
+  items: Item[];
 }
 
-export interface SkillLevel {
-  id: string;
+export interface Item {
   name: string;
+  description: string;
 }
