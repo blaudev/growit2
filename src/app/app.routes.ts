@@ -12,7 +12,7 @@ import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layout.component';
 import { MeLayoutComponent } from './layouts/me-layout/me-layout.component';
 import { LoginComponent } from './login/login.component';
-import { MeCareerPathComponent } from './me-carrer-path/me-carrer-path.component';
+import { MeCareerPathComponent } from './me-carrer-path/me-career-path.component';
 import { MeDocumentsComponent } from './me-documents/me-documents.component';
 import { MeOneOnOnesComponent } from './me-one-on-ones/me-one-on-ones.component';
 import { MePerformanceReviewsComponent } from './me-performance-reviews/me-performance-reviews.component';
