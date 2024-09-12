@@ -67,13 +67,19 @@ const users: User[] = [
   providedIn: 'root',
 })
 export class UserService {
+  currentUserId = signal<number | null>(null);
   activeUserId = signal<number | null>(null);
-  user = computed(() => users.find((u) => u.id === this.activeUserId()));
+
+  currentUser = computed(() => users.find((u) => u.id === this.activeUserId()));
+  activeUuser = computed(() =>
+    users.find((u) => u.id === this.currentUserId())
+  );
+
   users = signal(users);
 
   #init = effect(() => this.#loadUser(), { allowSignalWrites: true });
 
-  setActiveUser(user: 'manager' | 'employee') {
+  setCurrentUser(user: 'manager' | 'employee') {
     if (user === 'manager') {
       this.activeUserId.set(this.users().find((u) => u.isManager)!.id);
     } else {
@@ -82,6 +88,10 @@ export class UserService {
 
     localStorage.setItem('userId', this.activeUserId()!.toString());
     this.#loadUser();
+  }
+
+  setActiveUser(id: number) {
+    this.activeUserId.set(id);
   }
 
   #loadUser() {

@@ -2,7 +2,9 @@ import { Routes } from '@angular/router';
 import { CompanyCareerPathComponent } from './company-career-path/company-career-path.component';
 import { CompanyCareerPathsComponent } from './company-career-paths/company-career-paths.component';
 import { CompanyCareerPathEditorComponent } from './company-carer-path-editor/company-career-path-editor.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
+import { EmployeeLayoutComponent } from './layouts/employee-layout/employee-layout.component';
 import { MeLayoutComponent } from './layouts/me-layout/me-layout.component';
 import { LoginComponent } from './login/login.component';
 import { MeCareerPathComponent } from './me-carrer-path/me-carrer-path.component';
@@ -55,6 +57,16 @@ export const routes: Routes = [
       {
         path: 'team/employees',
         component: TeamEmployeesComponent,
+      },
+      {
+        path: 'team/employees/:id',
+        component: EmployeeLayoutComponent,
+        children: [
+          {
+            path: '',
+            component: EmployeeProfileComponent,
+          },
+        ],
       },
       {
         path: 'company/career-paths',

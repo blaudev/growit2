@@ -13,7 +13,7 @@ import { UserService } from '../services/user.service';
 export class TeamEmployeesComponent {
   #userService = inject(UserService);
 
-  user = this.#userService.user;
+  user = this.#userService.currentUser;
   users = this.#userService.users;
 
   avatar(id: number) {

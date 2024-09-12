@@ -17,7 +17,7 @@ export class CompanyCareerPathComponent {
   #userService = inject(UserService);
 
   careerPath = this.#careerPathService.careerPath;
-  user = this.#userService.user;
+  user = this.#userService.currentUser;
 
   #init = effect(() => this.#careerPathService.loadCareerPath(this.id()), {
     allowSignalWrites: true,
