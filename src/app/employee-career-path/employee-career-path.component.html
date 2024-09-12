@@ -1,1 +1,12 @@
-<div class="container">Coming soon...</div>
+<div class="container">
+  <div class="top">
+    <div class="header">
+      <div class="info">
+        <h1 class="title">Employee Career Path</h1>
+      </div>
+    </div>
+    @if (user(); as user) {
+    <app-user [user]="user"></app-user>
+    }
+  </div>
+</div>

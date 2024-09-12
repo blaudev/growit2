@@ -1,4 +1,4 @@
-@if (user(); as user) {
+@if (currentUser(); as currentUser) {
 
 <div class="container">
   <div class="aside">
@@ -64,9 +64,11 @@
     </div>
     <div class="bottom">
       <a class="user" routerLink="/">
-        <img class="avatar" [src]="avatar(user.id)" alt="{{ user.name }}" />{{
-          user.name
-        }}</a
+        <img
+          class="avatar"
+          [src]="avatar(currentUser.id)"
+          alt="{{ currentUser.name }}"
+        />{{ currentUser.name }}</a
       >
     </div>
   </div>

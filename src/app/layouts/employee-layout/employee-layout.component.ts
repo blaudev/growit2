@@ -12,13 +12,9 @@ import { UserService } from '../../services/user.service';
 export class EmployeeLayoutComponent {
   id = input.required<number>();
 
-  userService = inject(UserService);
+  #userService = inject(UserService);
 
-  user = this.userService.currentUser;
-
-  #init = effect(() => this.userService.setActiveUser(this.id()));
-
-  avatar(id: number) {
-    return `assets/${id}.jfif`;
-  }
+  #init = effect(() => this.#userService.setActiveUser(this.id()), {
+    allowSignalWrites: true,
+  });
 }

@@ -1,5 +1,5 @@
 import { effect, Injectable, signal } from '@angular/core';
-import type { CareerPath } from '../interfaces/career-ptah.interface';
+import type { CareerPath } from '../interfaces/career-path.interface';
 
 @Injectable({
   providedIn: 'root',

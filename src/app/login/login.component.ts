@@ -10,16 +10,16 @@ import { UserService } from '../services/user.service';
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
-  userService = inject(UserService);
-  router = inject(Router);
+  #userService = inject(UserService);
+  #router = inject(Router);
 
   loginManager() {
-    this.userService.setCurrentUser('manager');
-    this.router.navigate(['/me/career-path']);
+    this.#userService.setCurrentUser('manager');
+    this.#router.navigate(['/me/career-path']);
   }
 
   loginEmployee() {
-    this.userService.setCurrentUser('employee');
-    this.router.navigate(['/me/career-path']);
+    this.#userService.setCurrentUser('employee');
+    this.#router.navigate(['/me/career-path']);
   }
 }

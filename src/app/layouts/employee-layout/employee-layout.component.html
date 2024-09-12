@@ -15,14 +15,4 @@
   <a class="link" routerLink="documents" routerLinkActive="active">Documents</a>
 </div>
 
-@if (user(); as user) {
-<div class="user">
-  <img class="avatar" [src]="avatar(user.id)" alt="{{ user.name }}" />
-  <div class="info">
-    <h2 class="name">{{ user.name }}</h2>
-    <div class="level">{{ user.skillLevel }}</div>
-  </div>
-</div>
-}
-
 <router-outlet />

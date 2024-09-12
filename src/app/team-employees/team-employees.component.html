@@ -32,7 +32,7 @@
       @for (user of users; track user.id) {
       <tr>
         <td class="name-col">
-          <a routerLink="/team/employees/{{ user.id }}/profile">
+          <a routerLink="/team/employees/{{ user.id }}/career-path">
             <img class="avatar" [src]="avatar(user.id)" alt="{{ user.name }}" />
             <span class="name">{{ user.name }}</span>
           </a>

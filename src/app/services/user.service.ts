@@ -1,4 +1,5 @@
 import { computed, effect, Injectable, signal } from '@angular/core';
+import type { User } from '../interfaces/user.interface';
 
 const users: User[] = [
   {
@@ -68,40 +69,32 @@ const users: User[] = [
 })
 export class UserService {
   currentUserId = signal<number | null>(null);
-  activeUserId = signal<number | null>(null);
-
-  currentUser = computed(() => users.find((u) => u.id === this.activeUserId()));
-  activeUuser = computed(() =>
+  currentUser = computed(() =>
     users.find((u) => u.id === this.currentUserId())
   );
 
+  activeUserId = signal<number | null>(null);
+  activeUuser = computed(() => users.find((u) => u.id === this.activeUserId()));
+
   users = signal(users);
 
-  #init = effect(() => this.#loadUser(), { allowSignalWrites: true });
+  #init = effect(() => this.#loadCurrentUser(), { allowSignalWrites: true });
+
+  #loadCurrentUser() {
+    this.currentUserId.set(Number(localStorage.getItem('userId')));
+  }
 
   setCurrentUser(user: 'manager' | 'employee') {
-    if (user === 'manager') {
-      this.activeUserId.set(this.users().find((u) => u.isManager)!.id);
-    } else {
-      this.activeUserId.set(this.users().find((u) => !u.isManager)!.id);
-    }
+    const userId =
+      user === 'manager'
+        ? this.users().find((u) => u.isManager)!.id
+        : this.users().find((u) => !u.isManager)!.id;
 
-    localStorage.setItem('userId', this.activeUserId()!.toString());
-    this.#loadUser();
+    localStorage.setItem('userId', userId.toString());
+    this.#loadCurrentUser();
   }
 
   setActiveUser(id: number) {
     this.activeUserId.set(id);
   }
-
-  #loadUser() {
-    this.activeUserId.set(Number(localStorage.getItem('userId')));
-  }
-}
-
-interface User {
-  id: number;
-  name: string;
-  isManager: boolean;
-  skillLevel: string;
 }
