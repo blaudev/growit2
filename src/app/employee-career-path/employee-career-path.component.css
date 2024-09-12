@@ -1,5 +1,8 @@
 .container {
   width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .top {
@@ -9,4 +12,54 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-name {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.items {
+  border: solid 1px hsl(0, 0%, 80%);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+}
+
+.completed {
+  fill: hsl(120, 100%, 25%);
+}
+
+.incomplete {
+  fill: hsl(0, 0%, 80%);
+  cursor: pointer;
+}
+
+.description {
+  font-size: 14px;
+  color: hsl(0, 0%, 40%);
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: 500;
 }

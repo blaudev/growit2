@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { UserComponent } from '../components/user/user.component';
 import { UserService } from '../services/user.service';
 
@@ -10,5 +10,20 @@ import { UserService } from '../services/user.service';
   styleUrl: './employee-career-path.component.css',
 })
 export class EmployeeCareerPathComponent {
-  user = inject(UserService).activeUser;
+  #userService = inject(UserService);
+
+  currentUser = this.#userService.currentUser;
+  activeUser = this.#userService.activeUser;
+
+  cursor = computed(() =>
+    this.currentUser()?.isManager ? 'pointer' : 'default'
+  );
+
+  completeItem = (skill: string, item: string) => {
+    if (!this.currentUser()?.isManager) {
+      return;
+    }
+
+    this.#userService.completeItem(skill, item);
+  };
 }

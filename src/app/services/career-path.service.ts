@@ -339,7 +339,7 @@ const careerPaths: CareerPath[] = [
     description: 'Career path of Software Engineers.',
     levels: [
       {
-        name: 'Senior developer',
+        name: 'Senior Software Engineer',
         skills: [
           {
             name: 'Technology',
