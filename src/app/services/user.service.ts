@@ -74,7 +74,9 @@ export class UserService {
   );
 
   activeUserId = signal<number | null>(null);
-  activeUuser = computed(() => users.find((u) => u.id === this.activeUserId()));
+  activeUser = computed(() =>
+    this.users().find((u) => u.id == this.activeUserId())
+  );
 
   users = signal(users);
 
@@ -95,6 +97,7 @@ export class UserService {
   }
 
   setActiveUser(id: number) {
+    console.log('Setting active user', id);
     this.activeUserId.set(id);
   }
 }

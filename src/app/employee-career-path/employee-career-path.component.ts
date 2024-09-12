@@ -10,5 +10,5 @@ import { UserService } from '../services/user.service';
   styleUrl: './employee-career-path.component.css',
 })
 export class EmployeeCareerPathComponent {
-  user = inject(UserService).currentUser;
+  user = inject(UserService).activeUser;
 }
