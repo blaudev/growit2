@@ -339,6 +339,130 @@ const careerPaths: CareerPath[] = [
     description: 'Career path of Software Engineers.',
     levels: [
       {
+        name: 'Junior Software Engineer',
+        skills: [
+          {
+            name: 'Technology',
+            items: [
+              {
+                name: 'HTML',
+                description:
+                  'Understanding the basics of HTML, including tags, attributes, and document structure.',
+              },
+              {
+                name: 'CSS',
+                description:
+                  'Ability to style web pages using CSS, including layouts, colors, and responsive design.',
+              },
+              {
+                name: 'JavaScript basics',
+                description:
+                  'Basic knowledge of JavaScript, including variables, loops, and basic DOM manipulation.',
+              },
+              {
+                name: 'Version control (Git)',
+                description:
+                  'Familiarity with version control systems, particularly Git, including branching and merging.',
+              },
+            ],
+          },
+          {
+            name: 'Team Player',
+            items: [
+              {
+                name: 'Pair programming',
+                description:
+                  'Experience working with a partner on coding tasks.',
+              },
+              {
+                name: 'Code reviews (participating)',
+                description:
+                  'Participating in code reviews, providing and receiving feedback.',
+              },
+            ],
+          },
+          {
+            name: 'Communication',
+            items: [
+              {
+                name: 'Status updates',
+                description:
+                  'Regularly providing updates on task progress to the team.',
+              },
+              {
+                name: 'Asking for help',
+                description:
+                  'Knowing when and how to ask for assistance from teammates.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Mid. Software Engineer',
+        skills: [
+          {
+            name: 'Technology',
+            items: [
+              {
+                name: 'React/Vue/Angular',
+                description:
+                  'Proficiency in one of the major front-end frameworks such as React, Vue, or Angular.',
+              },
+              {
+                name: 'Node.js',
+                description:
+                  'Ability to build and maintain server-side applications using Node.js.',
+              },
+              {
+                name: 'RESTful APIs',
+                description: 'Experience designing and consuming RESTful APIs.',
+              },
+              {
+                name: 'SQL/NoSQL databases',
+                description:
+                  'Knowledge of database management systems, both SQL (e.g., MySQL) and NoSQL (e.g., MongoDB).',
+              },
+            ],
+          },
+          {
+            name: 'Team Player',
+            items: [
+              {
+                name: 'Mentoring juniors',
+                description:
+                  'Helping junior developers grow by sharing knowledge and guidance.',
+              },
+              {
+                name: 'Sprint planning',
+                description:
+                  'Participating in planning sessions to break down tasks and assign them.',
+              },
+              {
+                name: 'Estimating tasks',
+                description:
+                  'Accurately estimating the effort required to complete tasks.',
+              },
+            ],
+          },
+          {
+            name: 'Communication',
+            items: [
+              {
+                name: 'Technical documentation',
+                description:
+                  'Creating clear and comprehensive documentation for the software developed.',
+              },
+              {
+                name: 'Presenting in team meetings',
+                description:
+                  'Effectively presenting ideas and updates during team meetings.',
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: 'Senior Software Engineer',
         skills: [
           {

@@ -19,11 +19,13 @@ export class CompanyCareerPathComponent {
   careerPath = this.#careerPathService.currentCareerPath;
   user = this.#userService.currentUser;
 
-  skillNames = computed(() =>
-    this.careerPath()
-      ?.levels.map((l) => l.skills.map((s) => s.name))
-      .flat()
-  );
+  skillNames = computed(() => [
+    ...new Set(
+      this.careerPath()
+        ?.levels.map((l) => l.skills.map((s) => s.name))
+        .flat()
+    ),
+  ]);
 
   columns = computed(
     () => `auto repeat(${this.skillNames()?.length || 1}, 1fr)`
